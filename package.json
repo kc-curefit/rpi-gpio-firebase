@@ -1,0 +1,25 @@
+{
+  "name": "rpi-gpio-firebase",
+  "version": "1.0.0",
+  "description": "Control you raspberry pi GPIO ports from firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kc-curefit/rpi-gpio-firebase.git"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "gpio",
+    "firebase"
+  ],
+  "author": "Kunal Chourasia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kc-curefit/rpi-gpio-firebase/issues"
+  },
+  "homepage": "https://github.com/kc-curefit/rpi-gpio-firebase#readme"
+}
