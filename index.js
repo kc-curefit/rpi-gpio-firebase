@@ -44,9 +44,9 @@ switch4 = gpio.export(22, {
     }
 });
 
-var switchStatus = firebase.database().ref('/switchStatus/switch1');
-switchStatus.on('value', function (snapshot) {
-    console.log("switch1 value changed to" + snapshot.val())
+var switch1Status = firebase.database().ref('/switchStatus/switch1');
+switch1Status.on('value', function (snapshot) {
+    console.log("switch1 value changed to " + snapshot.val())
     if (snapshot.val() === true) {
         switch1.set(1)
     } else {
@@ -54,3 +54,32 @@ switchStatus.on('value', function (snapshot) {
     }
 });
 
+var switch3Status = firebase.database().ref('/switchStatus/switch2');
+switch3Status.on('value', function (snapshot) {
+    console.log("switch 2 value changed to " + snapshot.val())
+    if (snapshot.val() === true) {
+        switch2.set(1)
+    } else {
+        switch2.set(0)
+    }
+});
+
+var switch3Status = firebase.database().ref('/switchStatus/switch3');
+switch3Status.on('value', function (snapshot) {
+    console.log("switch 3 value changed to " + snapshot.val())
+    if (snapshot.val() === true) {
+        switch3.set(1)
+    } else {
+        switch3.set(0)
+    }
+});
+
+var switch4Status = firebase.database().ref('/switchStatus/switch4');
+switch4Status.on('value', function (snapshot) {
+    console.log("switch 4 value changed to " + snapshot.val())
+    if (snapshot.val() === true) {
+        switch4.set(1)
+    } else {
+        switch4.set(0)
+    }
+});
