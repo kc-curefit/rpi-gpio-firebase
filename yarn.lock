@@ -23,6 +23,10 @@ epoll@0.1.x:
     bindings "~1.2.1"
     nan "~2.6.2"
 
+gpio@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/gpio/-/gpio-0.2.7.tgz#bf386c88961efd0a4f6a0ff7167ac0ff3997eab9"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"

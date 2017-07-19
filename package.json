@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/kc-curefit/rpi-gpio-firebase#readme",
   "dependencies": {
+    "gpio": "^0.2.7",
     "rpi-gpio": "^0.8.1"
   }
 }
