@@ -46,8 +46,8 @@ switch4 = gpio.export(22, {
 
 var switchStatus = firebase.database().ref('/switchStatus/switch1');
 switchStatus.on('value', function (snapshot) {
-    console.log("switch1 value changed to" + value)
-    if (value === true) {
+    console.log("switch1 value changed to" + snapshot)
+    if (snapshot === true) {
         switch1.set(1)
     } else {
         switch1.set(0)
