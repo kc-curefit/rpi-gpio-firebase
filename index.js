@@ -23,7 +23,7 @@ switch1 = gpio.export(4, {
 switch2 = gpio.export(17, {
     direction: "out",
     ready: function () {
-        switch2.set(0)
+        switch2.set(1)
         console.log("switch 2 ready")
     }
 })
@@ -39,7 +39,7 @@ switch3 = gpio.export(27, {
 switch4 = gpio.export(22, {
     direction: "out",
     ready: function () {
-        switch4.set(0)
+        switch4.set(1)
         console.log("switch 4 ready")
     }
 });
