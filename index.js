@@ -1,13 +1,31 @@
 var gpio = require('rpi-gpio');
+ 
+var pin   = 7;
+var delay = 2000;
+var count = 0;
+var max   = 300;
 
-gpio.setup(7, gpio.DIR_OUT, write);
+console.log('start');
 
-function write() {
-  console.log('Writting to pin 7');
-  gpio.write(7, true, function (err) {
-    if (err) {
-      console.log(err)
+gpio.setup(pin, gpio.DIR_OUT, on);
+ 
+function on() {
+    console.log('on');
+    if (count >= max) {
+        gpio.destroy(function() {
+            console.log('Closed pins, now exit');
+        });
+        return;
     }
-    console.log('Written to pin 7');
-  });
+ 
+    setTimeout(function() {
+        gpio.write(pin, 1, off);
+        count += 1;
+    }, delay);
+}
+ 
+function off() {
+    setTimeout(function() {
+        gpio.write(pin, 0, on);
+    }, delay);
 }
